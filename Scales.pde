@@ -1,12 +1,18 @@
 void setup() {
-  size(500, 500);  //feel free to change the size
+  size(1000, 1000);  //feel free to change the size
   noLoop(); //stops the draw() function from repeating
 }
 void draw() {
-  for (int y = 0; y < 1100; y = y + 50)
-    for (int x = 0; x < 1100; x = x + 25)
-        scale(x, y);
-
+  
+  int y = 0;//line 7
+  while(y < 1100){//line 8
+    int x = 0;//line 6
+    while(x < 1100){  //line 9
+        scale(x, y); //line 10
+        x = x + 25;//line 10.5
+    } //end of the x while loop
+    y = y + 50; //line 12
+  } //end of y while loop
 }
 void scale(int x, int y) {
   //your code here
@@ -31,4 +37,3 @@ void scale(int x, int y) {
 
   
 }
-
